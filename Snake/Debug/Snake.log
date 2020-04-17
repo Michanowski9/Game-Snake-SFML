@@ -1,2 +1,5 @@
-﻿  main.cpp
-  Snake.vcxproj -> C:\Users\Sojka\Documents\GitHub\Game-Snake-SFML\Debug\Snake.exe
+﻿  Game.cpp
+  Window.cpp
+  Generating Code...
+Window.obj : error LNK2019: unresolved external symbol "private: void __thiscall Window::Setup(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,class sf::Vector2<unsigned int> const &)" (?Setup@Window@@AAEXABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@ABV?$Vector2@I@sf@@@Z) referenced in function "public: __thiscall Window::Window(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,class sf::Vector2<unsigned int> const &)" (??0Window@@QAE@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@ABV?$Vector2@I@sf@@@Z)
+C:\Users\Sojka\Documents\GitHub\Game-Snake-SFML\Debug\Snake.exe : fatal error LNK1120: 1 unresolved externals
