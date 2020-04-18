@@ -17,6 +17,8 @@ public:
 	void Update();
 
 	void Draw(sf::Drawable &l_drawable);
+
+	void ToggleFullScreen();
 private:
 	void Setup(const std::string &l_title, const sf::Vector2u &l_size);
 	void Create();
@@ -25,5 +27,6 @@ private:
 	sf::RenderWindow m_window;
 	sf::Vector2u m_windowSize;
 	std::string m_windowTitle;
+	bool m_isFullScreen;
 };
 
