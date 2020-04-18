@@ -15,6 +15,7 @@ public:
 	void EndDraw();
 
 	void Update();
+	bool IsOpen();
 
 	void Draw(sf::Drawable &l_drawable);
 
@@ -28,5 +29,6 @@ private:
 	sf::Vector2u m_windowSize;
 	std::string m_windowTitle;
 	bool m_isFullScreen;
+	bool m_isOpen;
 };
 
