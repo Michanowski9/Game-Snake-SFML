@@ -77,6 +77,21 @@ void Snake::Lose()
 	m_isAlive = false;
 }
 
+Direction Snake::GetPhysicalDirection()
+{
+	if (m_snakeBody.size() < 2){
+		return Direction::None;
+	}
+
+	if (m_snakeBody[0].position.x == m_snakeBody[1].position.x){
+		return (m_snakeBody[0].position.y > m_snakeBody[1].position.y) ? Direction::Down : Direction::Up;
+	}
+	else if (m_snakeBody[0].position.y == m_snakeBody[1].position.y) {
+		return (m_snakeBody[0].position.x > m_snakeBody[1].position.x) ? Direction::Right : Direction::Left;
+	}
+	return Direction::None;
+}
+
 void Snake::CheckCollision()
 {
 	if (m_snakeBody.size() < 5){
@@ -90,6 +105,22 @@ void Snake::CheckCollision()
 			break;
 		 }
 	}
+}
+
+sf::Vector2i Snake::GetHeadPosition()
+{
+	return m_snakeBody[0].position;
+}
+
+bool Snake::CheckFreeSpace(sf::Vector2i l_toCheckPosition)
+{
+	for (auto segment : m_snakeBody)
+	{
+		if (segment.position == l_toCheckPosition) {
+			return false;
+		}
+	}
+	return true;
 }
 
 void Snake::Extend()
@@ -129,6 +160,6 @@ void Snake::Reset()
 	m_snakeBody.push_back(SnakeSegment(5, 10));
 	SetDirection(Direction::None);
 	m_score = 0;
-	m_speed = 3;
+	m_speed = 15;
 	m_isAlive = true;
 }

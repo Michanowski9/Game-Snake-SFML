@@ -20,17 +20,20 @@ public:
 	void SetDirection(Direction l_direction);
 	Direction GetDirection();
 	int GetSpeed();
+	sf::Vector2i GetHeadPosition();
 
 	void Update();
 	void Reset();
 
 	void Lose();
 	bool IsAlive();
+	void Extend();
 
 	void Render(Window &l_window);
+	Direction GetPhysicalDirection();
+	bool CheckFreeSpace(sf::Vector2i l_toCheckPosition);
 private:
 	void Move();
-	void Extend();
 	void CheckCollision();
 
 	int m_speed;

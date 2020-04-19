@@ -4,6 +4,6 @@ c:\users\sojka\documents\github\game-snake-sfml\snake\snake.cpp(6): warning C424
           [
               T=float
           ]
-c:\users\sojka\documents\github\game-snake-sfml\snake\snake.cpp(116): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\users\sojka\documents\github\game-snake-sfml\snake\snake.cpp(121): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\sojka\documents\github\game-snake-sfml\snake\snake.cpp(143): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\sojka\documents\github\game-snake-sfml\snake\snake.cpp(148): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
   Snake.vcxproj -> C:\Users\Sojka\Documents\GitHub\Game-Snake-SFML\Debug\Snake.exe
